@@ -7,12 +7,12 @@ import numpy as np
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Dashboard & Recomendador de Películas - Top 500",
+    page_title="Las 500 Mejores Películas Según Letterboxd",
     page_icon="🎬",
     layout="wide"
 )
 
-st.title("🎬 Dashboard Interactivo & Sistema de Recomendación (Top 500)")
+st.title("Sistema de Recomendación y Análisis del Top 500 de Películas")
 
 # -----------------------------------------------------------------------------
 # 1. CARGA DE DATOS
@@ -28,7 +28,7 @@ def cargar_datos():
 df_top500 = cargar_datos()
 
 # Creación de pestañas para organizar la app de forma profesional
-tab1, tab2, tab3 = st.tabs(["📊 Estadísticas y Gráficos", "🔍 Buscador de Películas", "🎯 Quiz Recomendador"])
+tab1, tab2, tab3 = st.tabs(["Dashboard Estadístico", "Explorador de Películas", "Recomiéndame Una Película"])
 
 # -----------------------------------------------------------------------------
 # TAB 1: ESTADÍSTICAS Y GRÁFICOS
@@ -258,7 +258,7 @@ def filtrar_y_puntuar(df, respuestas):
     return df_filtrado
 
 with tab3:
-    st.header("🎯 Cuestionario de Recomendación Personalizada")
+    st.header("Cuestionario de Recomendación Personalizada")
     df_quiz_data = cargar_y_limpiar_datos(df_top500)
     
     # Formulario del Quiz
@@ -277,7 +277,7 @@ with tab3:
             dir_opt = st.text_input("9. ¿Hay algún director que te guste especialmente? (Opcional)")
             n_recom = st.slider("10. ¿Cuántas recomendaciones deseas?", 1, 5, 3)
             
-        enviado = st.form_submit_button("Obtener Recomendaciones 🍿")
+        enviado = st.form_submit_button("Obtener Recomendaciones")
 
     if enviado:
         respuestas = {

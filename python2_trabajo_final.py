@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Sistema de Recomendación y Análisis del Top 500 de Películas")
+st.title("Página Interactiva sobre las 500 Mejores Películas Según Letterboxd")
 
 # -----------------------------------------------------------------------------
 # 1. CARGA DE DATOS
@@ -112,7 +112,7 @@ with tab1:
 # TAB 2: BUSCADOR DE PELÍCULAS
 # -----------------------------------------------------------------------------
 with tab2:
-    st.header("🔍 Buscador por Filtros")
+    st.header("Buscador por Filtros")
     
     opcion_busqueda = st.radio("Buscar por:", ["País", "Género"])
     

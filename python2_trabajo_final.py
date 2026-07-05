@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Página Interactiva sobre las 500 Mejores Películas Según Letterboxd")
+st.title("Las 500 Películas que Todo Cinéfilo Debe Ver Según Letterboxd")
 
 # -----------------------------------------------------------------------------
 # 1. CARGA DE DATOS
